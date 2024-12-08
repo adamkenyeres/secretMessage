@@ -31,6 +31,9 @@
 
             for (let char of inputText) {
                 if (/[A-Z]/.test(char)) { // If char is an uppercase letter
+                    if (char === 'Ñ') {
+                        char = 'NN'; // Special case for 'Ñ'
+                    }
                     let imageName = char + '.png';
                     let imgElement = document.createElement('img');
                     imgElement.src = basePath + imageName;
