@@ -36,6 +36,12 @@
         imgElement.src = basePath + imageName;
         imgElement.alt = char;
         outputContainer.appendChild(imgElement);
+      } else if (char == 'Ñ') {
+          let imageName = char + '.png';
+          let imgElement = document.createElement('img');
+          imgElement.src = basePath + imageName;
+          imgElement.alt = char;
+          outputContainer.appendChild(imgElement);
       } else if (char === ' ') { // If char is a space
         let spaceElement = document.createElement('div');
         spaceElement.className = 'space';
